@@ -1,6 +1,6 @@
 /*
- * FINISHED PART 1
- * step 13 done
+ * step 16 / 139
+ * 
  */
 
 
@@ -17,17 +17,17 @@ import com.in30minutes.spring.basics.spring_in_5_steps.basic.BinarySearchImpl;
 import com.in30minutes.spring.basics.spring_in_5_steps.scope.PersonDAO;
 
 @SpringBootApplication
-public class SpringIn5StepsApplication {
+public class SpringIn5StepsScopeApplication {
 
 	private static Logger LOGGER = 
-			LoggerFactory.getLogger(SpringIn5StepsApplication.class); 
+			LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class); 
 	
 	public static void main(String[] args) {
 		
 		
 		// application context
 		ConfigurableApplicationContext applicationContext = 
-				SpringApplication.run(SpringIn5StepsApplication.class, args);
+				SpringApplication.run(SpringIn5StepsScopeApplication.class, args);
 		
 		PersonDAO personDao = 
 				applicationContext.getBean(PersonDAO.class);
@@ -37,6 +37,8 @@ public class SpringIn5StepsApplication {
 		
 		LOGGER.info("{}", personDao);
 		LOGGER.info("{}", personDao.getJdbcConnection());
+		LOGGER.info("{}", personDao.getJdbcConnection());
+		
 		LOGGER.info("{}", personDao2);
 		LOGGER.info("{}", personDao2.getJdbcConnection());
 		
