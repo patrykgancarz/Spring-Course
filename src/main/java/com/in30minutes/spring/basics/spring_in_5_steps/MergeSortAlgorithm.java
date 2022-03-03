@@ -5,12 +5,10 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
-@Qualifier("bubble")
-public class BubbleSortAlgorithm implements SortAlgorithm{
+@Qualifier("merge")
+public class MergeSortAlgorithm implements SortAlgorithm{
 	public int[] sort(int [] numbers) {
 		//logic
 		return numbers;
 	}
-
 }
