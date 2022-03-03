@@ -12,11 +12,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
-import com.in30minutes.spring.basics.spring_in_5_steps.basic.BinarySearchImpl;
-import com.in30minutes.spring.basics.spring_in_5_steps.scope.PersonDAO;
+//import com.in30minutes.spring.basics.componentscan;
+import com.in30minutes.spring.basics.componentscan.ComponentDAO;
 
 @SpringBootApplication
+@ComponentScan("com.in30minutes.spring.basics.componentscan")
 public class SpringIn5StepsScopeApplication {
 
 	private static Logger LOGGER = 
@@ -26,21 +28,13 @@ public class SpringIn5StepsScopeApplication {
 		
 		
 		// application context
-		ConfigurableApplicationContext applicationContext = 
+		ApplicationContext applicationContext = 
 				SpringApplication.run(SpringIn5StepsScopeApplication.class, args);
 		
-		PersonDAO personDao = 
-				applicationContext.getBean(PersonDAO.class);
+		ComponentDAO componentDao = 
+				applicationContext.getBean(ComponentDAO.class);
 		
-		PersonDAO personDao2 = 
-				applicationContext.getBean(PersonDAO.class);
-		
-		LOGGER.info("{}", personDao);
-		LOGGER.info("{}", personDao.getJdbcConnection());
-		LOGGER.info("{}", personDao.getJdbcConnection());
-		
-		LOGGER.info("{}", personDao2);
-		LOGGER.info("{}", personDao2.getJdbcConnection());
+		LOGGER.info("{}", componentDao);
 		
 	}
 	

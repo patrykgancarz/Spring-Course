@@ -14,7 +14,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import com.in30minutes.spring.basics.spring_in_5_steps.basic.BinarySearchImpl;
-import com.in30minutes.spring.basics.spring_in_5_steps.scope.PersonDAO;
+import com.in30minutes.spring.basics.spring_in_5_steps.scope.ComponentDAO;
 
 @SpringBootApplication
 public class SpringIn5StepsBasicApplication {
