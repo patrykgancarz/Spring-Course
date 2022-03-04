@@ -1,9 +1,3 @@
-/*
- * step 16 / 139
- * 
- */
-
-
 package com.in30minutes.spring.basics.spring_in_5_steps;
 
 import org.slf4j.LoggerFactory;
@@ -30,10 +24,10 @@ public class SpringIn5StepsComponentScanApplication {
 		
 		
 		// application context
-		ApplicationContext applicationContext = 
+		try (AnnotationConfigApplicationContext applicationContext = 
 				new AnnotationConfigApplicationContext(
 						SpringIn5StepsComponentScanApplication.class
-						);
+						)) {
 				
 				//SpringApplication.run(SpringIn5StepsComponentScanApplication.class, args);
 		
@@ -49,6 +43,6 @@ public class SpringIn5StepsComponentScanApplication {
 		
 		LOGGER.info("{}", personDao2);
 		LOGGER.info("{}", personDao2.getJdbcConnection());
-		
+		}
 	}
 }

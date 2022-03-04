@@ -1,8 +1,3 @@
- /* step 18 / 139
- * 
- */
-
-
 package com.in30minutes.spring.basics.spring_in_5_steps;
 
 import org.slf4j.LoggerFactory;
@@ -30,17 +25,17 @@ public class SpringIn5StepsCdiApplication {
 		
 		
 		// application context
-		ApplicationContext applicationContext = 
+		try (AnnotationConfigApplicationContext applicationContext = 
 				new AnnotationConfigApplicationContext(
 						SpringIn5StepsCdiApplication.class
-						);
+						)) {
 				//SpringApplication.run(SpringIn5StepsCdiApplication.class, args);
 		
 		SomeCdiBusiness business = 
 				applicationContext.getBean(SomeCdiBusiness.class);
 		
 		LOGGER.info("{} dao--{}", business, business.getSomeCDIDAO());
-
+		}
 		
 	}
 }

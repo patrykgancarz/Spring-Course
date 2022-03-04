@@ -15,6 +15,8 @@ import org.springframework.stereotype.Component;
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
 public class BinarySearchImpl {
 
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
+	
 	@Autowired
 	@Qualifier("merge")
 	private SortAlgorithm sortAlgorithm;
@@ -23,8 +25,6 @@ public class BinarySearchImpl {
 	 * public BinarySearchImpl(SortAlgorithm sortAlgorithm) { super();
 	 * this.sortAlgorithm = sortAlgorithm; }
 	 */
-
-	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	public int binarySearch(int[] numbers, int numberToSearchFor) {
 
@@ -38,15 +38,15 @@ public class BinarySearchImpl {
 	}
 
 	
-	  @PostConstruct 
-	  public void postConstruct() { 
-		  //logger.info("postConstruct"); 
-	  }
+	@PostConstruct 
+	public void postConstruct() { 
+		logger.info("postConstruct"); 
+	}
 	 
 
 	@PreDestroy
 	public void preDestroy() {
-		//logger.info("preDestroy");
+		logger.info("preDestroy");
 	}
 
 }

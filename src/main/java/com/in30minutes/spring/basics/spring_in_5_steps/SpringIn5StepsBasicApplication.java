@@ -1,14 +1,8 @@
-/*
- * step 16 / 139
- * 
- */
-
-
 package com.in30minutes.spring.basics.spring_in_5_steps;
 
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-import org.springframework.boot.SpringApplication;
+//import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -38,10 +32,9 @@ public class SpringIn5StepsBasicApplication {
 	  //BinarySearchImpl(new QuickSortAlgorithm());
 	  
 	  //application context 
-		  ConfigurableApplicationContext applicationContext =
+		  try (AnnotationConfigApplicationContext applicationContext =
 				  new AnnotationConfigApplicationContext(
-						  SpringIn5StepsBasicApplication.class
-						  );
+						  SpringIn5StepsBasicApplication.class)) {
 				  //SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
 	  
 		  BinarySearchImpl binarySearch =
@@ -54,7 +47,10 @@ public class SpringIn5StepsBasicApplication {
 	  
 		  int result = binarySearch.binarySearch(new int[] {2, 4, 6}, 3);
 	  
-		  System.out.println(result); }
+		  System.out.println(result);
+		  }
+		  
+	  }
 	 
 
 }
