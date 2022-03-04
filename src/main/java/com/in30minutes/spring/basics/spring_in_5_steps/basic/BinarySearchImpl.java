@@ -40,13 +40,13 @@ public class BinarySearchImpl {
 	
 	  @PostConstruct 
 	  public void postConstruct() { 
-		  logger.info("postConstruct"); 
+		  //logger.info("postConstruct"); 
 	  }
 	 
 
 	@PreDestroy
 	public void preDestroy() {
-		logger.info("preDestroy");
+		//logger.info("preDestroy");
 	}
 
 }
