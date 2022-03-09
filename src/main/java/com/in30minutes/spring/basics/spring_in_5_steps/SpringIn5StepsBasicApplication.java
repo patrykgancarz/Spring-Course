@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import com.in30minutes.spring.basics.spring_in_5_steps.basic.BinarySearchImpl;
+import com.in30minutes.spring.basics.spring_in_5_steps.basic.XmlPersonDAO;
 import com.in30minutes.spring.basics.spring_in_5_steps.scope.PersonDAO;
 
 @Configuration
@@ -37,11 +37,11 @@ public class SpringIn5StepsBasicApplication {
 						  SpringIn5StepsBasicApplication.class)) {
 				  //SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
 	  
-		  BinarySearchImpl binarySearch =
-				  applicationContext.getBean(BinarySearchImpl.class);
+		  XmlPersonDAO binarySearch =
+				  applicationContext.getBean(XmlPersonDAO.class);
 	  
-		  BinarySearchImpl binarySearch1 =
-				  applicationContext.getBean(BinarySearchImpl.class);
+		  XmlPersonDAO binarySearch1 =
+				  applicationContext.getBean(XmlPersonDAO.class);
 		  System.out.println(binarySearch); System.out.println(binarySearch1);
 	  
 	  

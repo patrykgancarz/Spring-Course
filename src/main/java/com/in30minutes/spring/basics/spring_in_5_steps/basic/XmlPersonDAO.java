@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
-public class BinarySearchImpl {
+public class XmlPersonDAO {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	
