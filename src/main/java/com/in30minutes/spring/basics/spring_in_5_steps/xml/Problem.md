@@ -1,6 +1,16 @@
 
 #Problem: ApplicationContext closes too fast
 
+# Solution
+
+##import com.in30minutes.spring.basics.spring_in_5_steps.XML.XmlPersonDAO;
+
+Wrong import address ...
+
+I thought I already checked that it was fixed and fell into the rabbit hole... 
+##Double, Triple check simple solution first
+
+
 #Description: 
 
 ###Loads config properly:

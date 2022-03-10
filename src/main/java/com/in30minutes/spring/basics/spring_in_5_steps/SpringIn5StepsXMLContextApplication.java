@@ -1,16 +1,20 @@
 package com.in30minutes.spring.basics.spring_in_5_steps;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.in30minutes.spring.basics.spring_in_5_steps.basic.XmlPersonDAO;
+import com.in30minutes.spring.basics.spring_in_5_steps.xml.XmlPersonDAO;
 
 @Configuration
 @ComponentScan//("com.in30minutes.spring.basics.spring_in_5_steps")
 public class SpringIn5StepsXMLContextApplication {
   
-	  
+	private static Logger LOGGER = 
+			LoggerFactory.getLogger(SpringIn5StepsScopeApplication.class); 
+	
 	  public static void main(String[] args) {
 	  
 
@@ -24,7 +28,7 @@ public class SpringIn5StepsXMLContextApplication {
 				  applicationContext.getBean(XmlPersonDAO.class);
 
 		  System.out.println(personDAO);
-		  //System.out.println(personDAO.getXmlJdbcConnection());
+		  System.out.println(personDAO.getXmlJdbcConnection());
 
 		  }
 		  
@@ -32,3 +36,4 @@ public class SpringIn5StepsXMLContextApplication {
 	 
 
 }
+
